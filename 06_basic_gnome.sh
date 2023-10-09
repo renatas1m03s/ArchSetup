@@ -6,7 +6,7 @@ yay -Sy gnome
 
 yay -Sy --noconfirm cronie inetutils dnsutils python-pip conky gnome-disk-utility konsole openconnect networkmanager-openconnect
 
-yay -Sy --noconfirm ffmpeg vlc neofetch openvpn google-chrome snapd update-grub shotwell gnome-tweaks
+yay -Sy --noconfirm ffmpeg vlc neofetch openvpn google-chrome snapd update-grub shotwell gnome-tweaks gnome-browser-connector
 
 yay -Sy pamac-aur
 

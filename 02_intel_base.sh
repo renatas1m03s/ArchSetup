@@ -14,9 +14,9 @@ cat /mnt/etc/fstab
 
 echo -e '\nCopiando os arquivos do SetupMyArch\n'
 
-mkdir /mnt/home/SetupMyArch
+mkdir /mnt/home/ArchSetup
 
-cp -rv ./* /mnt/home/SetupMyArch
+cp -rv ./* /mnt/home/ArchSetup
 
 echo -e '\nExecutando o chroot\n'
 
