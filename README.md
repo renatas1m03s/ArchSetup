@@ -1,2 +1,1 @@
-# ArchSetup
-Basic setup of my arch PC - now with gnome option
+This is a personal bunch of files for automate my arch setup - Learning purpose
