@@ -1,24 +1,24 @@
 #!/bin/bash
 
-yay -Sy --noconfirm plasma5-applets-virtual-desktop-bar-git
+yay -Sy --needed --noconfirm plasma5-applets-virtual-desktop-bar-git
 
 sudo mkdir -v /usr/share/plasma/desktoptheme/Utterly-Round
 
-sudo cp -v ./Utterly-Round-Desktop.tar.xz /usr/share/plasma/desktoptheme/Utterly-Round/
+# sudo cp -v ./Utterly-Round-Desktop.tar.xz /usr/share/plasma/desktoptheme/Utterly-Round/
 
-cd /usr/share/plasma/desktoptheme/Utterly-Round
+# cd /usr/share/plasma/desktoptheme/Utterly-Round
 
-sudo tar -xvf ./Utterly-Round-Desktop.tar.xz
+# sudo tar -xvf ./Utterly-Round-Desktop.tar.xz
 
-cd /home/SetupMyArch
+# cd /home/SetupMyArch
 
 sudo systemctl enable --now bluetooth
 sudo systemctl enable --now cronie
+sudo systemctl enable --now ModemManager
 
-cp -v /home/SetupMyArch/functions/* /home/renata/.config/fish/functions/
+cp -v ./functions/* /home/renata/.config/fish/functions/
 
-pip3 install pysimplegui pyperclip
-sudo pacman -Sy --noconfirm xsel tk
+yay -S --needed --noconfirm python.pysimplegui python.pyperclip xsel tk
 
 if [ ! -d ~/.local/share/applications ]; then
 	mkdir ~/.local/share/applications

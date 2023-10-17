@@ -10,5 +10,3 @@ sudo cp -v /mnt/Backup/Documents/LinuxCustomizations/ddclient.conf /etc/ddclient
 
 sudo systemctl enable --now ddclient && sleep 3 && sudo systemctl restart ddclient && sleep 3 && sudo systemctl status ddclient
 
-# Games
-yay -Sy steam-native-runtime protonup-qt gamescope-plus retroarch-git yuzu emulationstation-de pcsx2-git

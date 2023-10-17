@@ -1,12 +1,8 @@
 #!/bin/bash
 
-echo -e "\nConfigurando o reflector e o pacman.conf...\n"
-
 sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 8/g' /etc/pacman.conf
 sudo sed -i 's/#Color/Color\nILoveCandy/g' /etc/pacman.conf
-sudo sed -i 's/#[multilib]\n#Include/[multilib]\nInclude/g' /etc/pacman.conf
-
-reflector -l 10 --sort rate --save /etc/pacman.d/mirrorlist
+sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
 echo -e '\nConfigurando timezone e locales\n'
 
