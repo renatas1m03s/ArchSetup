@@ -3,18 +3,18 @@
 # ATTENTION - To configure the bridge connection libvirtd is needed
 
 # Parameters for onboard connection
-set ADAPTER1 (ip link show | grep -B 1 "a8:a1:59:d8:f5:e8" | grep enp | awk -F':' '{print $2}')
-set CONECTION1 (nmcli con show | grep $ADAPTER1 | awk '{print $1" "$2" "$3}'
+set ADAPTER1 (ip link show | grep -B 1 "" | grep eno1 | awk -F':' '{print $2}')
+set CONECTION1 (nmcli con show | grep $ADAPTER1 | awk '{print $1" "$2" "$3}')
 set CONECTION1_NEWNAME "Onboard"
 
 # Parameters for bridge connection
-set ADAPTER2 (ip link show | grep -B 1 "d0:00:30:13:5e:86" | grep enp | awk -F':' '{print $2}')
-set CONECTION2_ID (nmcli con show | grep $ADAPTER2 | awk '{print $4}'
-set BR_NAME br10
-set BR_INT $ADAPTER2
-set SUBNET_IP 10.10.10.1/24
-set DNS1 8.8.8.8
-set DNS2 8.8.4.4
+# set ADAPTER2 (ip link show | grep -B 1 "d0:00:30:13:5e:86" | grep enp | awk -F':' '{print $2}')
+# set CONECTION2_ID (nmcli con show | grep $ADAPTER2 | awk '{print $4}')
+# set BR_NAME br10
+# set BR_INT $ADAPTER2
+# set SUBNET_IP 10.10.10.1/24
+# set DNS1 8.8.8.8
+# set DNS2 8.8.4.4
 
 
 # Configuring onboard connection to a fixed ip adddress
