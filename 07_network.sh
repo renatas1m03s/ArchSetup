@@ -27,16 +27,16 @@ nmcli con mod $CONECTION1_NEWNAME ipv4.method manual
 nmcli con down $CONECTION1_NEWNAME && nmcli con up $CONECTION1_NEWNAME 
 
 # Configuring brige connection
-nmcli connection delete $CONECTION2_ID
-nmcli connection add type bridge autoconnect yes con-name $BR_NAME ifname $BR_NAME
-nmcli connection modify $BR_NAME ipv4.addresses $SUBNET_IP ipv4.method manual
-nmcli connection modify $BR_NAME ipv4.dns $DNS1 +ipv4.dns $DNS2
-nmcli connection add type bridge-slave autoconnect yes con-name $BR_INT ifname $BR_INT master $BR_NAME
-nmcli connection up $BR_NAME
+# nmcli connection delete $CONECTION2_ID
+# nmcli connection add type bridge autoconnect yes con-name $BR_NAME ifname $BR_NAME
+# nmcli connection modify $BR_NAME ipv4.addresses $SUBNET_IP ipv4.method manual
+# nmcli connection modify $BR_NAME ipv4.dns $DNS1 +ipv4.dns $DNS2
+# nmcli connection add type bridge-slave autoconnect yes con-name $BR_INT ifname $BR_INT master $BR_NAME
+# nmcli connection up $BR_NAME
 
-virsh net-define /home/renata/SystemInfo/config-bridge.xml
-virsh net-start --network BridgeNet01
-virsh net-autostart BridgeNet01
+# virsh net-define /home/renata/SystemInfo/config-bridge.xml
+# virsh net-start --network BridgeNet01
+# virsh net-autostart BridgeNet01
 
 # Configuring VPN with Lanlink
 nmcli connection add connection.id Lanlink connection.type vpn vpn.service-type openconnect vpn.data cookie-flags=2,gateway=vpn.lanlink.com.br,protocol=gp
