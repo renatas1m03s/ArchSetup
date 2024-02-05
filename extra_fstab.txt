@@ -3,3 +3,4 @@
 /dev/disk/by-uuid/eb7c3d96-162f-41b7-b47f-add2c21b0220 /mnt/SteamGames2 auto nosuid,nodev,nofail,x-gvfs-show 0 0
 /dev/disk/by-uuid/ae977b84-cb99-492c-b50c-0e8b1242789f /mnt/Multimedia auto nosuid,nodev,nofail,x-gvfs-show 0 0
 /dev/disk/by-uuid/e5baf492-8653-415f-b0c4-bd88a81d61bd /mnt/Backup auto nosuid,nodev,nofail,x-gvfs-show 0 0
+/dev/disk/by-uuid/a3eb3cce-a34f-4141-b604-9aa293cb40c5 /mnt/Data auto nosuid,nodev,nofail,x-gvfs-show 0 0
