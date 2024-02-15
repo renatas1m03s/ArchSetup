@@ -8,9 +8,17 @@ yay -Sy --needed --noconfirm gnome gnome-tweaks gnome-extension gnome-browser-co
 
 yay -Sy --needed --noconfirm nautilus-sendto gnome-nettool gnome-usage gnome-multi-writer adwaita-icon-theme xdg-user-dirs-gtk fwupd arc-gtk-theme
 
-yay -Sy --needed --noconfirm inetutils dnsutils python-pip conky okular openconnect networkmanager-openconnect ffmpeg vlc
+sudo sed -i 's/#WaylandEnable=false/WaylandEnable=true/g' /etc/gdm/custom.conf
 
-yay -Sy --needed  --noconfirm neofetch openvpn google-chrome snapd usb_modeswitch update-grub 
+sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/g' /etc/mkinitcpio.conf
+
+sudo mkinitcpio -P
+
+sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
+
+yay -Sy --needed --noconfirm inetutils dnsutils python-pip conky okular openconnect networkmanager-openconnect modemmanager
+
+yay -Sy --needed  --noconfirm ffmpeg vlc neofetch openvpn google-chrome snapd usb_modeswitch update-grub 
 
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
