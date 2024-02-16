@@ -8,7 +8,7 @@ sudo chmod +x /usr/bin/fast
 
 sudo modprobe nct6775
 
-sudo echo -e nct6775 >> /etc/modules-load.d/nct6775.conf
+echo nct6775 | sudo tee /etc/modules-load.d/nct6775.conf
 
 sudo sensors-detect --auto
 
