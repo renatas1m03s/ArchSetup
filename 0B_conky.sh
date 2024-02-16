@@ -2,6 +2,14 @@
 
 #sudo snap install fast && sleep 03 && sudo snap install fast
 
+sudo wget https://github.com/ddo/fast/releases/download/v0.0.4/fast_linux_amd64 -O /usr/bin/fast
+
+sudo chmod +x /usr/bin/fast
+
+sudo modprobe nct6775
+
+sudo echo -e nct6775 >> /etc/modules-load.d/nct6775.conf
+
 sudo sensors-detect --auto
 
 ssh-keygen -t rsa
