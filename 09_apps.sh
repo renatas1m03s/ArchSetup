@@ -2,9 +2,9 @@
 
 yay -Sy --noconfirm timeshift openrgb-git microsoft-edge-stable-bin teams qbittorrent
 
-sudo pacman -Sy --noconfirm avidemux-qt gimp kdenlive remmina obs-studio darktable ddclient wine lutris telegram-desktop onlyoffice-bin
+yay -Sy --noconfirm avidemux-qt gimp kdenlive remmina obs-studio darktable ddclient wine lutris telegram-desktop onlyoffice-bin
 
-sudo sed -i 's/PIDFile=\/run/PIDFile=\/var\/run/g' /usr/lib/systemd/system/ddclient.service
+# sudo sed -i 's/PIDFile=\/run/PIDFile=\/var\/run/g' /usr/lib/systemd/system/ddclient.service
 
 sudo cp -v /mnt/Backup/Documents/LinuxCustomizations/ddclient.conf /etc/ddclient/ddclient.conf
 
