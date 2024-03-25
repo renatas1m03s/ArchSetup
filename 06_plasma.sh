@@ -2,15 +2,15 @@
 
 yay -Sy --needed  --noconfirm wireplumber pipewire-alsa pipewire-pulse lib32-pipewire bluez bluez-utils blueman network-manager-applet cronie
 
-yay -S --needed  sddm xorg xorg-xwayland xorg-xlsclients qt5-wayland glfw-wayland plasma plasma-wayland-session egl-wayland
+yay -S --needed  --noconfirm sddm xorg xorg-xwayland xorg-xlsclients qt6-wayland glfw-wayland plasma plasma-wayland-session
 
-yay -S --needed  --noconfirm packagekit-qt5 gnome-disk-utility konsole inetutils dnsutils python-pip conky
+yay -S --needed  --noconfirm packagekit-qt6 gnome-disk-utility konsole inetutils dnsutils python-pip conky
 
 yay -S --needed  --noconfirm okular dolphin konsole ark spectacle gwenview geany kcalc openconnect networkmanager-openconnect
 
-yay -S --needed  --noconfirm ffmpeg smplayer kio5 kio-extras ffmpegthumbs kdegraphics-thumbnailers
+yay -S --needed  --noconfirm ffmpeg smplayer kio kio-extras ffmpegthumbs kdegraphics-thumbnailers
 
-yay -S --needed  --noconfirm kimageformats5 qt5-imageformats kdesdk-thumbnailers neofetch openvpn
+yay -S --needed  --noconfirm kimageformats qt6-imageformats kdesdk-thumbnailers neofetch openvpn
 
 yay -S --needed  --noconfirm resvg raw-thumbnailer google-chrome snapd usb_modeswitch
 

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-yay -Sy --needed --noconfirm plasma5-applets-virtual-desktop-bar-git
+# yay -Sy --needed --noconfirm plasma5-applets-virtual-desktop-bar-git
 
-sudo mkdir -v /usr/share/plasma/desktoptheme/Utterly-Round
+# sudo mkdir -v /usr/share/plasma/desktoptheme/Utterly-Round
 
 # sudo cp -v ./Utterly-Round-Desktop.tar.xz /usr/share/plasma/desktoptheme/Utterly-Round/
 

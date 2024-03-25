@@ -10,8 +10,8 @@ if test -z "$1"
 then 
       echo -e 'Forma de usar: ./create_fs.sh NOME_DO_DISCO  -Ex.: ./create_fs.sh nvme0n1p\n'
 else 
-#      echo -e 'Formatando EFI - /dev/'$1'1 - FAT32 - /boot\n' 
-#      mkfs.fat -F32 -n EFI /dev/$1'1'
+      echo -e 'Formatando EFI - /dev/'$1'1 - FAT32 - /boot\n' 
+      mkfs.fat -F32 -n EFI /dev/$1'1'
       echo -e 'Formatando Boot - /dev/'$1'2 - ext4 - /boot\n'
       mkfs.ext4 -L Boot /dev/$1'2'
       echo -e 'Formatando Root - /dev/'$1'4 - ext4 - /\n'

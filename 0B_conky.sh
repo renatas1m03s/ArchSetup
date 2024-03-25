@@ -17,6 +17,8 @@ cat ~/.ssh/id_rsa.pub | ssh -p 3389 renata@192.168.15.3 'cat >> .ssh/authorized_
 
 sudo crontab -l -u renata | cat - crontab.txt | sudo crontab -u renata -
 
+crontab -l
+
 mkdir -p ~/.config/conky
 
 cp -v ~/Documents/LinuxCustomizations/MinimalisConky/conky-sed.conf ~/.config/conky/conky.conf
