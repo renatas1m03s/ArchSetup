@@ -18,7 +18,9 @@ sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 
 yay -Sy --needed --noconfirm inetutils dnsutils python-pip conky okular openconnect networkmanager-openconnect modemmanager
 
-yay -Sy --needed  --noconfirm ffmpeg vlc neofetch openvpn google-chrome snapd usb_modeswitch update-grub 
+yay -Sy --needed  --noconfirm ffmpeg vlc neofetch openvpn google-chrome snapd usb_modeswitch update-grub gthumb nufraw
+
+sudo cp -v ./ufraw.thumbnailer /usr/share/thumbnailers/
 
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
