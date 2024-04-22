@@ -12,12 +12,12 @@ yay -S --needed  --noconfirm ffmpeg smplayer kio kio-extras ffmpegthumbs kdegrap
 
 yay -S --needed  --noconfirm kimageformats qt6-imageformats kdesdk-thumbnailers neofetch openvpn
 
-yay -S --needed  --noconfirm resvg raw-thumbnailer google-chrome snapd usb_modeswitch
+yay -S --needed  --noconfirm resvg raw-thumbnailer google-chrome usb_modeswitch
 
 yay -S --needed --noconfirm update-grub pamac-tray-icon-plasma pamac-aur
 
-sudo systemctl enable --now snapd.socket
-sudo ln -s /var/lib/snapd/snap /snap
+# sudo systemctl enable --now snapd.socket
+# sudo ln -s /var/lib/snapd/snap /snap
 
 yay -S --needed  --noconfirm adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji
 

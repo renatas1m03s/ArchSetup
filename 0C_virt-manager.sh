@@ -1,6 +1,6 @@
  #!/bin/bash
 
-sudo modprobe kvm_amd
+sudo modprobe kvm_intel
 
 sudo pacman -Sy --needed qemu virt-manager dnsmasq iptables-nft edk2-ovmf swtpm
 

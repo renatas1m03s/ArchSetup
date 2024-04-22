@@ -8,7 +8,8 @@ echo -e '\nConfigurando timezone e locales\n'
 
 ln -sf /usr/share/zoneinfo/America/Fortaleza /etc/localtime
 sed -i s/#en_US.UTF-8/en_US.UTF-8/g /etc/locale.gen && locale-gen && echo LANG=en_US.UTF-8 >> /etc/locale.conf
-echo KEYMAP=us-acentos >> /etc/vconsole.conf
+# echo KEYMAP==us-acentos >> /etc/vconsole.conf
+echo KEYMAP==br-abnt2 >> /etc/vconsole.conf
 
 echo -e '\n Instalando editores de texto básicos e o fish shell\n'
 
@@ -44,8 +45,10 @@ echo -e '\nConfigurando o GRUB com thema'
 
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck
 
-sed -i 's/quiet/quiet nvme_load=YES/g' /etc/default/grub
+# sed -i 's/quiet/quiet nvme_load=YES/g' /etc/default/grub
 sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/g' /etc/default/grub
+
+# quiet loglevel=3 splash nvme_load=YES split_lock_detect=off
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
