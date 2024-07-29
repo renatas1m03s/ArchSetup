@@ -6,6 +6,8 @@
 
 # echo -e '[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist' | sudo tee -a /etc/pacman.conf
 
+localectl set-keymap us-acentos
+
 sudo pacman -Sy --noconfirm --needed base-devel git wget yajl
 cd /tmp && git clone https://aur.archlinux.org/package-query.git && cd package-query/ && makepkg -si --noconfirm && cd /tmp
 
