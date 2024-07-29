@@ -1,5 +1,5 @@
 /dev/disk/by-uuid/19ae4e13-1d6d-4833-965b-a20197aebf27 /mnt/RetroGames auto nosuid,nodev,nofail,x-gvfs-show 0 0
-/dev/disk/by-uuid/2ccdf64b-bf66-4980-a87a-9b60dd0a78d8 /mnt/SteamGames1 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+/dev/disk/by-uuid/02629e02-a66d-4290-8a67-717ec9db6acc /mnt/SteamGames1 auto nosuid,nodev,nofail,x-gvfs-show 0 0
 /dev/disk/by-uuid/eb7c3d96-162f-41b7-b47f-add2c21b0220 /mnt/SteamGames2 auto nosuid,nodev,nofail,x-gvfs-show 0 0
 /dev/disk/by-uuid/ae977b84-cb99-492c-b50c-0e8b1242789f /mnt/Multimedia auto nosuid,nodev,nofail,x-gvfs-show 0 0
 /dev/disk/by-uuid/e5baf492-8653-415f-b0c4-bd88a81d61bd /mnt/Backup auto nosuid,nodev,nofail,x-gvfs-show 0 0
