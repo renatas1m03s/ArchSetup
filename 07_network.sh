@@ -3,7 +3,7 @@
 # ATTENTION - To configure the bridge connection libvirtd is needed
 
 # Parameters for onboard connection
-set ADAPTER1 (ip link show | grep -B 1 "08:bf:b8:99:e6:3e" | grep eno1 | awk -F':' '{print $2}')
+set ADAPTER1 (ip link show | grep -B 1 "a8:a1:59:d8:f5:e8" | grep enp | awk -F':' '{print $2}')
 set CONECTION1 (nmcli con show | grep $ADAPTER1 | awk '{print $1" "$2" "$3}')
 set CONECTION1_NEWNAME "Onboard"
 
