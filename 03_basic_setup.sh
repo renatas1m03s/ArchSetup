@@ -31,6 +31,9 @@ passwd
 echo -e '\nConfigurando o usuário renata\n'
 
 useradd -m -g users -G wheel -s /usr/bin/fish renata && passwd renata
+
+sleep 2
+
 echo 'renata ALL=(ALL) ALL' | sudo EDITOR='tee -a' visudo
 cat /etc/sudoers
 
@@ -49,7 +52,6 @@ echo -e '\nConfigurando o GRUB com thema'
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck
 
 sed -i 's/loglevel=3 quiet/quiet loglevel=3 splash split_lock_detect=off nvidia_drm.modeset=1/g' /etc/default/grub
-# sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/g' /etc/default/grub
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
