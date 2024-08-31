@@ -18,6 +18,9 @@ sudo cp -v ./ufraw.thumbnailer /usr/share/thumbnailers/
 
 yay -S --needed  --noconfirm adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji
 
+yay -S --needed  --noconfirm gnome-shell-extension-dash-to-panel gnome-shell-extension-appindicator gnome-shell-extension-arch-update gnome-shell-extension-hidetopbar-git 
+
+
 sudo systemctl enable gdm
 sudo systemctl enable bluetooth
 sudo systemctl enable cronie
