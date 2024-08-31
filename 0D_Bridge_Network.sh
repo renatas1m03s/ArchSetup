@@ -4,7 +4,7 @@ if test (count $argv) = 1
     set BR_INT $argv[1]
     set BR_NAME br10
     set SUBNET_IP 172.31.1.100/24
-    set CON_ID (nmcli con show | grep $BR_INT | awk '{print $2}')
+    set CON_ID (nmcli con show | grep $BR_INT | awk '{print $4}')
        
     sudo nmcli con delete $CON_ID
     sudo nmcli connection add type bridge autoconnect yes con-name $BR_NAME ifname $BR_NAME
