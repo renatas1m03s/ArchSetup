@@ -1,35 +1,47 @@
 #!/bin/bash
 
-yay -Sy --needed --noconfirm wireplumber pipewire-alsa pipewire-pulse lib32-pipewire bluez bluez-utils blueman network-manager-applet cronie
+yay -Sy --needed --noconfirm lib32-pipewire bluez-utils cronie
 
-yay Sy --needed --noconfirm gdm xorg-xwayland xorg-xlsclients glfw-wayland egl-wayland
+yay -Sy --needed --noconfirm xorg gnome glfw-wayland egl-wayland gnome-terminal
 
-yay -Sy --needed --noconfirm gnome gnome-tweaks gnome-extension gnome-browser-connector gnome-shell-extensions qt5-styleplugins breeze
+yay -Sy --needed --noconfirm gnome-tweaks gnome-browser-connector breeze-gtk
 
-yay -Sy --needed --noconfirm nautilus-sendto gnome-nettool gnome-usage gnome-multi-writer adwaita-icon-theme xdg-user-dirs-gtk fwupd arc-gtk-theme
-
-sudo sed -i 's/#WaylandEnable=false/WaylandEnable=true/g' /etc/gdm/custom.conf
-
-sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/g' /etc/mkinitcpio.conf
-
-sudo mkinitcpio -P
+yay -Sy --needed --noconfirm gnome-nettool gnome-usage gnome-multi-writer fwupd arc-gtk-theme
 
 sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 
-yay -Sy --needed --noconfirm inetutils dnsutils python-pip conky okular openconnect networkmanager-openconnect modemmanager
+yay -Sy --needed --noconfirm inetutils dnsutils conky openconnect networkmanager-openconnect modemmanager
 
-yay -Sy --needed  --noconfirm ffmpeg vlc neofetch openvpn google-chrome snapd usb_modeswitch update-grub gthumb nufraw
+yay -Sy --needed  --noconfirm vlc neofetch openvpn google-chrome usb_modeswitch update-grub nufraw geany
 
 sudo cp -v ./ufraw.thumbnailer /usr/share/thumbnailers/
 
-sudo systemctl enable --now snapd.socket
-sudo ln -s /var/lib/snapd/snap /snap
-
 yay -S --needed  --noconfirm adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji
 
-sudo mkdir /usr/share/fonts/WindowsFonts
-sudo cp -rv /mnt/Backup/Documents/LinuxCustomizations/MS-Fonts/* /usr/share/fonts/WindowsFonts/
-sudo chmod 644 /usr/share/fonts/WindowsFonts/*
-sudo fc-cache –force
+sudo systemctl enable gdm
+sudo systemctl enable bluetooth
+sudo systemctl enable cronie
+sudo systemctl enable ModemManager
 
-sudo systemctl enable gdm.service
+cp -v ./functions/* /home/renata/.config/fish/functions/
+
+if [ ! -d ~/.local/share/applications ]; then
+	mkdir ~/.local/share/applications
+fi
+
+if [ ! -d ~/.local/share/icons ]; then
+	mkdir ~/.local/share/icons
+fi
+
+cp -v /mnt/Backup/Home/.local/share/applications/launcher.desktop /home/renata/.local/share/applications/
+cp -v /mnt/Backup/Home/.local/share/applications/DaVinciResolve.desktop /home/renata/.local/share/applications/
+cp -v /mnt/Backup/Home/.local/share/applications/geany.desktop /home/renata/.local/share/applications/
+
+mv -v /home/renata.bak/.local/share/icons/Te* /home/renata/.local/share/icons
+
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp
+
+echo -e "\n\nApós acabar executar:\n\nomf install lambda && omf theme lambda\n\n"
+
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
