@@ -15,4 +15,4 @@ nmcli con mod $CONECTION1_NEWNAME ipv4.method manual
 nmcli con down $CONECTION1_NEWNAME && nmcli con up $CONECTION1_NEWNAME 
 
 # Configuring VPN with Lanlink
-nmcli connection add connection.id Lanlink connection.type vpn vpn.service-type openconnect vpn.data cookie-flags=2,gateway=vpn.lanlink.com.br,protocol=gp
+# nmcli connection add connection.id Lanlink connection.type vpn vpn.service-type openconnect vpn.data cookie-flags=2,gateway=vpn.lanlink.com.br,protocol=gp
