@@ -4,22 +4,19 @@ yay -Sy --needed --noconfirm lib32-pipewire bluez-utils cronie
 
 yay -Sy --needed --noconfirm xorg gnome glfw-wayland egl-wayland gnome-terminal
 
-yay -Sy --needed --noconfirm gnome-tweaks gnome-browser-connector breeze-gtk
+yay -Sy --needed --noconfirm gnome-tweaks gnome-browser-connector breeze-gtk power-profiles-daemon 
 
-yay -Sy --needed --noconfirm gnome-nettool gnome-usage gnome-multi-writer fwupd arc-gtk-theme
+yay -Sy --needed --noconfirm gnome-nettool gnome-usage gnome-multi-writer fwupd arc-gtk-theme mesa-utils
 
 sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 
 yay -Sy --needed --noconfirm inetutils dnsutils conky openconnect networkmanager-openconnect modemmanager
 
-yay -Sy --needed  --noconfirm vlc neofetch openvpn google-chrome usb_modeswitch update-grub nufraw geany
+yay -Sy --needed  --noconfirm vlc neofetch openvpn google-chrome usb_modeswitch update-grub nufraw geany p7zip htop
 
 sudo cp -v ./ufraw.thumbnailer /usr/share/thumbnailers/
 
 yay -S --needed  --noconfirm adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji
-
-yay -S --needed  --noconfirm gnome-shell-extension-dash-to-panel gnome-shell-extension-appindicator gnome-shell-extension-arch-update gnome-shell-extension-hidetopbar-git 
-
 
 sudo systemctl enable gdm
 sudo systemctl enable bluetooth
