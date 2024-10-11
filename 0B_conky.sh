@@ -6,9 +6,9 @@ sudo wget https://github.com/ddo/fast/releases/download/v0.0.4/fast_linux_amd64 
 
 sudo chmod +x /usr/bin/fast
 
-sudo modprobe nct6775
+# sudo modprobe nct6775
 
-echo nct6775 | sudo tee /etc/modules-load.d/nct6775.conf
+# echo nct6775 | sudo tee /etc/modules-load.d/nct6775.conf
 
 sudo sensors-detect --auto
 
