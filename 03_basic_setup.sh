@@ -4,6 +4,8 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 8/g' /etc/pacman.conf
 sudo sed -i 's/#Color/Color\nILoveCandy/g' /etc/pacman.conf
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
+echo -e '\nExecutando o reflector...\n'
+
 reflector --sort rate --latest 10 --save /etc/pacman.d/mirrorlist
 
 echo -e '\nConfigurando timezone e locales\n'
@@ -51,7 +53,8 @@ echo -e '\nConfigurando o GRUB com thema'
 
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck
 
-sed -i 's/loglevel=3 quiet/quiet loglevel=3 splash split_lock_detect=off nvidia_drm.modeset=1/g' /etc/default/grub
+# sed -i 's/loglevel=3 quiet/quiet loglevel=3 splash split_lock_detect=off nvidia_drm.modeset=1/g' /etc/default/grub
+sed -i 's/loglevel=3 quiet/quiet loglevel=3 splash split_lock_detect=off/g' /etc/default/grub
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
