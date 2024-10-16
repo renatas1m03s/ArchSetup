@@ -27,6 +27,8 @@ fi
 
 cp -v ./autostart/* ~/.config/autostart
 
+conky &
+
 # mkdir -p ~/.config/conky
 
 # cp -v ~/Documents/LinuxCustomizations/MinimalisConky/conky-sed.conf ~/.config/conky/conky.conf
