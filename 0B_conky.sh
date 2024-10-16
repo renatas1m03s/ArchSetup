@@ -6,9 +6,9 @@ sudo wget https://github.com/ddo/fast/releases/download/v0.0.4/fast_linux_amd64 
 
 sudo chmod +x /usr/bin/fast
 
-# sudo modprobe nct6775
+sudo modprobe nct6775
 
-# echo nct6775 | sudo tee /etc/modules-load.d/nct6775.conf
+echo nct6775 | sudo tee /etc/modules-load.d/nct6775.conf
 
 sudo sensors-detect --auto
 
@@ -19,9 +19,17 @@ sudo crontab -l -u renata | cat - crontab.txt | sudo crontab -u renata -
 
 crontab -l
 
-mkdir -p ~/.config/conky
+sh ./Conky/install-conky.sh
 
-cp -v ~/Documents/LinuxCustomizations/MinimalisConky/conky-sed.conf ~/.config/conky/conky.conf
+if [ ! -d ~/.config/autostart ]; then
+	mkdir ~/.config/autostart
+fi
+
+cp -v ./autostart/* ~/.config/autostart
+
+# mkdir -p ~/.config/conky
+
+# cp -v ~/Documents/LinuxCustomizations/MinimalisConky/conky-sed.conf ~/.config/conky/conky.conf
 
 # if [ ! -d /home/renata/.config/autostart ]; then
 # 	mkdir /home/renata/.config/autostart
