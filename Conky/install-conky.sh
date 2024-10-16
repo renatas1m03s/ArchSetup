@@ -88,7 +88,7 @@ fi
 echo "################################################################" 
 echo "The files have been copied to ~/.config/conky."
 # the standard place conky looks for a config file
-cp -r * ~/.config/conky/
+cp -r ./Conky/* ~/.config/conky/
 
 # echo "################################################################" 
 # echo "Making sure conky autostarts next boot."
