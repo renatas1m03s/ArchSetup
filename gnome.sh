@@ -12,7 +12,7 @@ sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 
 yay -Sy --needed --noconfirm inetutils dnsutils conky openconnect networkmanager-openconnect modemmanager
 
-yay -Sy --needed  --noconfirm vlc neofetch openvpn google-chrome usb_modeswitch update-grub nufraw geany p7zip htop
+yay -Sy --needed  --noconfirm vlc neofetch openvpn google-chrome usb_modeswitch update-grub nufraw geany p7zip btop
 
 sudo cp -v ./ufraw.thumbnailer /usr/share/thumbnailers/
 
