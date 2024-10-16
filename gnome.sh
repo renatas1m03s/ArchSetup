@@ -10,7 +10,7 @@ yay -Sy --needed --noconfirm gnome-nettool gnome-usage gnome-multi-writer fwupd 
 
 sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 
-yay -Sy --needed --noconfirm inetutils dnsutils conky openconnect networkmanager-openconnect modemmanager
+yay -Sy --needed --noconfirm inetutils dnsutils conky openconnect networkmanager-openconnect modemmanager gdm-settings
 
 yay -Sy --needed  --noconfirm vlc neofetch openvpn google-chrome usb_modeswitch update-grub nufraw geany p7zip btop
 
@@ -37,11 +37,14 @@ cp -v /mnt/Backup/Home/.local/share/applications/launcher.desktop /home/renata/.
 cp -v /mnt/Backup/Home/.local/share/applications/DaVinciResolve.desktop /home/renata/.local/share/applications/
 cp -v /mnt/Backup/Home/.local/share/applications/geany.desktop /home/renata/.local/share/applications/
 
-mv -v /home/renata.bak/.local/share/icons/Te* /home/renata/.local/share/icons
+# mv -v /home/renata.bak/.local/share/icons/Te* /home/renata/.local/share/icons
+yay -Sy --noconfirm tela-circle-icon-theme-ubuntu gnome-shell-extension-dash-to-dock 
+
 
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp
 
-echo -e "\n\nApós acabar executar:\n\nomf install lambda && omf theme lambda\n\n"
+echo -e "\n\nApós acabar executar:\n\nomf install lambda && omf theme lambda\n"
+echo -e "Outro possível tema é o bobthefish\n\n"
 
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
