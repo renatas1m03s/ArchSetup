@@ -5,7 +5,7 @@ yay -Sy --needed  --noconfirm plasma-meta xorg-xlsclients bluez-utils blueman cr
 
 yay -S --needed  --noconfirm packagekit-qt6 gnome-disk-utility konsole inetutils dnsutils conky
 
-yay -S --needed  --noconfirm okular dolphin konsole ark spectacle gwenview geany kcalc openconnect networkmanager-openconnect
+yay -S --needed  --noconfirm okular dolphin ark spectacle gwenview geany kcalc openconnect networkmanager-openconnect
 
 yay -S --needed  --noconfirm kio kio-extras ffmpegthumbs kdegraphics-thumbnailers
 
@@ -16,6 +16,8 @@ yay -S --needed  --noconfirm resvg raw-thumbnailer google-chrome usb_modeswitch
 yay -S --needed --noconfirm update-grub pamac-tray-icon-plasma pamac-aur
 
 yay -S --needed  --noconfirm adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji
+
+yay -Sy --noconfirm plasma6-applets-panel-colorizer tela-circle-icon-theme-ubuntu reversal-icon-theme-git
 
 sudo mkdir /usr/share/fonts/WindowsFonts
 sudo cp -rv /mnt/Backup/Documents/LinuxCustomizations/MS-Fonts/* /usr/share/fonts/WindowsFonts/
