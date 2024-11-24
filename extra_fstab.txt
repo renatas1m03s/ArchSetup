@@ -8,7 +8,7 @@ UUID=e5baf492-8653-415f-b0c4-bd88a81d61bd       /mnt/Backup      ext4           
 UUID=091b51db-1df4-4764-b256-36529bf4881e       /mnt/Multimedia  ext4           nosuid,nodev,nofail,x-gvfs-show 0 0
 
 # SteamGames1
-UUID=396f4716-9cab-4bff-a9d4-e95ecb5196a5       /mnt/SteamGames1 ext4           nosuid,nodev,nofail,x-gvfs-show 0 0
+UUID=ce6bb940-e2e1-43d1-8ae4-f5829811408e       /mnt/SteamGames1 ext4           nosuid,nodev,nofail,x-gvfs-show 0 0
 
 # SteamGames2
 UUID=eb7c3d96-162f-41b7-b47f-add2c21b0220       /mnt/SteamGames2 ext4           nosuid,nodev,nofail,x-gvfs-show 0 0
