@@ -1,5 +1,4 @@
-plasma-meta 
-nvidia-open
+#!/bin/bash
 
 yay -Sy --needed  --noconfirm plasma-meta xorg-xlsclients bluez-utils blueman cronie  
 
@@ -11,13 +10,11 @@ yay -S --needed  --noconfirm kio kio-extras ffmpegthumbs kdegraphics-thumbnailer
 
 yay -S --needed  --noconfirm kimageformats qt6-imageformats kdesdk-thumbnailers neofetch openvpn
 
-yay -S --needed  --noconfirm resvg raw-thumbnailer google-chrome usb_modeswitch
-
-yay -S --needed --noconfirm update-grub pamac-tray-icon-plasma pamac-aur
+yay -S --needed  --noconfirm vlc neofetch openvpn google-chrome usb_modeswitch update-grub nufraw geany p7zip btop pamac-tray-icon-plasma pamac-aur
 
 yay -S --needed  --noconfirm adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji
 
-yay -Sy --noconfirm plasma6-applets-panel-colorizer tela-circle-icon-theme-ubuntu reversal-icon-theme-git
+yay -Sy --noconfirm plasma6-applets-panel-colorizer
 
 sudo mkdir /usr/share/fonts/WindowsFonts
 sudo cp -rv /mnt/Backup/Documents/LinuxCustomizations/MS-Fonts/* /usr/share/fonts/WindowsFonts/
