@@ -8,6 +8,10 @@
 
 localectl set-keymap us-acentos
 
+timedatectl set-timezone America/Fortaleza
+
+timedatectl set-ntp true
+
 sudo pacman -Sy --noconfirm --needed base-devel git wget yajl
 cd /tmp && git clone https://aur.archlinux.org/package-query.git && cd package-query/ && makepkg -si --noconfirm && cd /tmp
 

@@ -6,7 +6,7 @@ sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
 echo -e '\nExecutando o reflector...\n'
 
-reflector --sort rate --latest 10 --save /etc/pacman.d/mirrorlist
+reflector --sort rate --latest 20 --save /etc/pacman.d/mirrorlist
 
 echo -e '\nConfigurando timezone e locales\n'
 
@@ -44,6 +44,8 @@ sudo usermod renata -aG libvirt
 
 echo -e '\nInstalando os pacotes básicos e habilitando o NetworkManager e sshd\n'
 
+sed -i 's/block filesystems fsck/block filesystems fsck plymouth/g' /etc/mkinitcpio.conf
+
 pacman -Sy --noconfirm dosfstools os-prober mtools networkmanager dialog sudo
 pacman -Sy --noconfirm rsync grub-efi-x86_64 efibootmgr openssh exfat-utils plymouth
 
@@ -57,8 +59,6 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_
 sed -i 's/loglevel=3 quiet/quiet loglevel=3 splash split_lock_detect=off/g' /etc/default/grub
 
 grub-mkconfig -o /boot/grub/grub.cfg
-
-sed -i 's/block filesystems fsck/block filesystems fsck plymouth/g' /etc/mkinitcpio.conf
 
 echo -e '\nDefinindo os parâmetros do SSHD\n'
 

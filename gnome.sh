@@ -2,9 +2,9 @@
 
 yay -Sy --needed --noconfirm lib32-pipewire bluez-utils cronie
 
-yay -Sy --needed --noconfirm xorg gnome glfw-wayland egl-wayland gnome-terminal
+yay -Sy --needed --noconfirm xorg gnome glfw-wayland egl-wayland alacritty
 
-yay -Sy --needed --noconfirm gnome-tweaks gnome-browser-connector breeze-gtk power-profiles-daemon 
+yay -Sy --needed --noconfirm gnome-tweaks gnome-browser-connector breeze-gtk tuned tuned-ppd
 
 yay -Sy --needed --noconfirm gnome-nettool gnome-usage gnome-multi-writer fwupd arc-gtk-theme mesa-utils
 
@@ -12,9 +12,13 @@ sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 
 yay -Sy --needed --noconfirm inetutils dnsutils conky openconnect networkmanager-openconnect modemmanager gdm-settings
 
-yay -Sy --needed  --noconfirm vlc neofetch openvpn google-chrome usb_modeswitch update-grub nufraw geany p7zip btop
+yay -Sy --needed  --noconfirm vlc neofetch openvpn google-chrome usb_modeswitch update-grub nufraw geany p7zip btop pacman-contrib
 
 sudo cp -v ./ufraw.thumbnailer /usr/share/thumbnailers/
+
+mkdir -p /home/renata/.config/alacritty/
+
+cp -v ./alacritty/* /home/renata/.config/alacritty/
 
 yay -S --needed  --noconfirm adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji
 
@@ -22,6 +26,9 @@ sudo systemctl enable gdm
 sudo systemctl enable bluetooth
 sudo systemctl enable cronie
 sudo systemctl enable ModemManager
+sudo systemctl enable tuned  
+sudo systemctl enable tuned-ppd
+
 
 cp -v ./functions/* /home/renata/.config/fish/functions/
 
@@ -38,7 +45,7 @@ cp -v /mnt/Backup/Home/.local/share/applications/DaVinciResolve.desktop /home/re
 cp -v /mnt/Backup/Home/.local/share/applications/geany.desktop /home/renata/.local/share/applications/
 
 # mv -v /home/renata.bak/.local/share/icons/Te* /home/renata/.local/share/icons
-yay -Sy --noconfirm tela-circle-icon-theme-ubuntu gnome-shell-extension-dash-to-dock 
+yay -Sy --noconfirm gnome-shell-extension-dash-to-dock gnome-shell-extension-appindicator-git gnome-shell-extension-arch-update
 
 
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
